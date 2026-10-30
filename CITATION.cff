@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this versioned source release."
+type: software
+title: "BioReview Pro: PDF Analyzer Multibot"
+authors:
+  - family-names: Aslam
+    given-names: Arslan
+version: 0.1.0
+date-released: 2026-10-30
+repository-code: "https://github.com/mian707/pdf-analyzer-multibot"
+url: "https://github.com/mian707/pdf-analyzer-multibot/releases/tag/v0.1.0"
+license: MIT
+abstract: "A local browser application for human-reviewed literature screening and template-driven PDF extraction using Google, OpenAI and Anthropic provider adapters."
+keywords:
+  - systematic review
+  - literature screening
+  - data extraction
+  - scientific PDFs

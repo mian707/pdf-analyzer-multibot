@@ -1,0 +1,24 @@
+Analyze this scientific paper for a "Microplastics in soil" systematic review. Extract reported microplastic abundance in soil/farmland, the polymer types found, and the analytical methods used to recover and identify the particles.
+CRITICAL DATA SOURCE CONSTRAINT: Extract ONLY primary data generated within THIS study. Ignore background, secondary references, and data from other studies cited in the text.
+
+## Study
+- Reference ("reference"): Short citation (first author et al., year). Example: Liu et al., 2018
+- Study Title ("studyTitle"): Full title of the paper.
+- Location ("location"): Geographic location / land use of the sampled site(s). Example: Vegetable farmlands, China
+
+## Methods
+- Polymers Types ("polymerTypes"): All polymer types identified, with abbreviations as reported. Example: Polypropylene (PP); polyethylene (PE); polyester (PES)
+- Identification Method ("identificationMethod"): Technique used to identify/confirm polymers. Example: µ-FT-IR; stereomicroscope + FTIR
+- Digestion Method ("digestionMethod"): Chemical digestion used to remove organic matter, or "NA". Example: 30% H2O2
+- Density Separation ("densitySeparation"): Density separation solution and density, or "NA". Example: saturated NaCl (1.19 g/cm³)
+
+## Per-site measurements — REPEATING (return an array under "measurements")
+Return ONE object for EACH distinct soil/field type or sampling stratum the study reports a microplastic concentration for (e.g. shallow soil vs deep soil, or orchards vs paddy fields vs vegetable plots). If the study reports only one overall value, return a single object.
+Each item in the array has these fields:
+- Soil / Field Type ("fieldType"): The soil layer, land use, or stratum this row describes. Example: Shallow soil; Deep soil; orchards; paddy fields
+- Mean ("mean"): Mean abundance for this stratum, with ± SD if reported. "NA" if not given. Example: 78.00 ± 12.91
+- Min ("min"): Minimum abundance reported, or "NA".
+- Max ("max"): Maximum abundance reported, or "NA".
+- Unit ("unit"): Unit of the abundance values. Example: items kg⁻¹
+
+For "evidence", return an object whose keys are field ids above and whose values are the exact source snippet justifying each extraction.

@@ -1,0 +1,39 @@
+{
+  "name": "biosci-pdf-analyzer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit",
+    "protocol": "node scripts/export-protocol.mjs"
+  },
+  "dependencies": {
+    "react-dom": "^19.2.3",
+    "@google/genai": "^1.33.0",
+    "react": "^19.2.3",
+    "lucide-react": "^0.561.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  },
+  "description": "Template-driven literature screening and scientific PDF extraction with human review",
+  "license": "MIT",
+  "author": "Arslan Aslam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mian707/pdf-analyzer-multibot.git"
+  },
+  "homepage": "https://github.com/mian707/pdf-analyzer-multibot",
+  "bugs": {
+    "url": "https://github.com/mian707/pdf-analyzer-multibot/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "title": {
+      "type": "STRING",
+      "description": "Full title of the paper."
+    },
+    "studySummary": {
+      "type": "STRING",
+      "description": "A concise two-sentence summary of the key findings."
+    },
+    "articleType": {
+      "type": "STRING",
+      "description": "e.g. 'Research Article', 'Review Article', 'Case Report'."
+    },
+    "studyTypes": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "e.g. 'in vivo', 'in vitro', 'in silico'."
+    },
+    "systems": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "Biological systems/species, e.g. 'rat', 'Sprague-Dawley rat'."
+    },
+    "ratStrain": {
+      "type": "STRING",
+      "description": "Rat strain used, e.g. 'Sprague-Dawley', 'Wistar', 'Long-Evans', or 'Not Applicable'."
+    },
+    "chemicals": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "Substances evaluated."
+    },
+    "doses": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "Tested doses with units, e.g. '10 mg/kg/day', '100 mg/kg bw', '0 (control)'."
+    },
+    "exposureDuration": {
+      "type": "STRING",
+      "description": "Exposure duration / window, e.g. '28 days', 'GD6–PND21'."
+    },
+    "exposureType": {
+      "type": "STRING",
+      "description": "e.g. 'Acute', 'Subacute', 'Subchronic', 'Chronic', 'Developmental'."
+    },
+    "routeOfAdministration": {
+      "type": "STRING",
+      "description": "Route of administration, e.g. 'Oral gavage', 'Diet', 'Drinking water', 'Subcutaneous injection'."
+    },
+    "hasTranscriptomics": {
+      "type": "BOOLEAN",
+      "description": "True if the study uses transcriptomics (RNA-Seq, microarrays, qPCR profiling)."
+    },
+    "noaelValues": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "NOAEL values with units and the endpoint they refer to, or empty if not reported."
+    },
+    "loaelValues": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "LOAEL values with units and the endpoint they refer to, or empty if not reported."
+    },
+    "ld50Values": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "LD50 values per chemical with units, or empty if not reported."
+    },
+    "estrogenConclusion": {
+      "type": "STRING",
+      "description": "One-sentence statement on estrogen-signalling markers (ERα/esr1, ERβ/esr2, aromatase Cyp19a1). 'Not assessed' if none measured."
+    },
+    "hormoneConclusion": {
+      "type": "STRING",
+      "description": "One-sentence conclusion on circulating hormone changes (E2, T, etc.). 'Not assessed' if none measured."
+    },
+    "neuroendocrineConclusion": {
+      "type": "STRING",
+      "description": "One-sentence statement on neuroendocrine markers (Kiss1, Kiss1r, GnRH). 'Not assessed' if none measured."
+    },
+    "vtgConclusion": {
+      "type": "STRING",
+      "description": "One-sentence statement on vitellogenin if measured (uncommon in mammals). 'Not assessed' if not measured."
+    },
+    "endpoints": {
+      "type": "ARRAY",
+      "description": "Return ONE object for EACH endocrine endpoint the study actually measured — separately per sex and per dose group when the study reports them separately. Cover these endpoint families WHERE MEASURED: (1) VTG — vitellogenin protein or vtg mRNA; (2) Estrogen-signalling genes — ERα (esr1), ERβ (esr2), aromatase Cyp19a1 (or the fish paralogs cyp19a / cyp19b if reported); (3) Hormone levels — Estradiol (E2), Testosterone (T), 11-Ketotestosterone, Progesterone, FSH, LH, T3, T4, Cortisol/Corticosterone, and the E2/T ratio; (4) Neuroendocrine genes — Kiss1, Kiss1r, GnRH (gnrh3). Do NOT create rows for endpoints that were not measured in this study.",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "endpoint": {
+            "type": "STRING",
+            "description": "The specific marker, e.g. 'Estradiol (E2)', 'Testosterone', 'ERα (esr1) mRNA', 'Aromatase (Cyp19a1)', 'Kiss1', 'VTG protein'."
+          },
+          "category": {
+            "type": "STRING",
+            "description": "One of: 'VTG', 'Estrogen signaling', 'Hormone level', 'Neuroendocrine'."
+          },
+          "sex": {
+            "type": "STRING",
+            "description": "'Male', 'Female', 'Both', or 'Pooled'."
+          },
+          "doseGroup": {
+            "type": "STRING",
+            "description": "Dose/treatment group this result refers to, e.g. '100 mg/kg/day', or 'Overall' if not dose-resolved."
+          },
+          "matrix": {
+            "type": "STRING",
+            "description": "Sample matrix, e.g. 'Plasma', 'Serum', 'Tissue homogenate', or 'NA'."
+          },
+          "tissue": {
+            "type": "STRING",
+            "description": "Tissue/organ analysed, e.g. 'Testis', 'Ovary', 'Brain', 'Liver', or 'NA'."
+          },
+          "direction": {
+            "type": "STRING",
+            "description": "Direction of change vs control: 'Increase', 'No change', 'Decrease', or 'N/A'. Do NOT include time or duration."
+          },
+          "significance": {
+            "type": "STRING",
+            "description": "Statistical significance: 'Significant', 'Not Significant', or 'N/A'."
+          }
+        },
+        "required": [
+          "endpoint",
+          "category",
+          "sex",
+          "direction",
+          "significance"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "OBJECT",
+      "description": "For each key finding, the exact text snippet copied verbatim from the PDF that supports it. Used for verification.",
+      "properties": {
+        "studySummary": {
+          "type": "STRING"
+        },
+        "ratStrain": {
+          "type": "STRING"
+        },
+        "chemicals": {
+          "type": "STRING"
+        },
+        "doses": {
+          "type": "STRING"
+        },
+        "exposureDuration": {
+          "type": "STRING"
+        },
+        "noaelValues": {
+          "type": "STRING"
+        },
+        "loaelValues": {
+          "type": "STRING"
+        },
+        "ld50Values": {
+          "type": "STRING"
+        },
+        "estrogenConclusion": {
+          "type": "STRING"
+        },
+        "hormoneConclusion": {
+          "type": "STRING"
+        },
+        "neuroendocrineConclusion": {
+          "type": "STRING"
+        },
+        "vtgConclusion": {
+          "type": "STRING"
+        },
+        "endpoints": {
+          "type": "STRING"
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "studySummary",
+    "articleType",
+    "studyTypes",
+    "systems",
+    "ratStrain",
+    "chemicals",
+    "doses",
+    "exposureDuration",
+    "exposureType",
+    "hasTranscriptomics",
+    "endpoints"
+  ]
+}

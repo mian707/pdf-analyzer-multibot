@@ -1,0 +1,21 @@
+name: Source checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: node scripts/check-publication.mjs
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run protocol
+      - run: git diff --exit-code -- docs/protocol

@@ -1,0 +1,40 @@
+# Dependencies and generated application bundles
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+
+# Real environment files and credentials; keep only the blank example
+.env
+.env.*
+!.env.local.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local research materials and exports
+data/
+private/
+local-data/
+exports/
+logs/
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.rar
+*.log
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

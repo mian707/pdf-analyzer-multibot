@@ -1,0 +1,3 @@
+"ID","Title","Year","Journal","DOI","Authors","Abstract","User Status","AI Status","AI Reasoning","Full Text Status","Full Text Reason","Full Text File","Full Text AI Status","Full Text AI Reasoning","Full Text AI Exclusion Reason"
+"DEMO-001","Synthetic example: endocrine measurements in zebrafish","2026","Fictional example journal","","","Invented record for testing manual review. No underlying study or measurements exist.","UNREVIEWED","N/A","N/A","N/A","","","N/A","",""
+"DEMO-002","Synthetic example: a narrative discussion of fish hormones","2026","Fictional example journal","","","Invented narrative-review record for testing screening decisions. No underlying paper exists.","UNREVIEWED","N/A","N/A","N/A","","","N/A","",""

@@ -1,0 +1,5 @@
+{
+  "name": "BioSci PDF Analyzer",
+  "description": "An intelligent tool to extract and characterize scientific study details from PDF files using Gemini AI.",
+  "requestFramePermissions": []
+}

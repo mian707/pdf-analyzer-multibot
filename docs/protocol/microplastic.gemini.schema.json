@@ -1,0 +1,103 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "reference": {
+      "type": "STRING",
+      "description": "Short citation (first author et al., year). Example: Liu et al., 2018"
+    },
+    "studyTitle": {
+      "type": "STRING",
+      "description": "Full title of the paper."
+    },
+    "location": {
+      "type": "STRING",
+      "description": "Geographic location / land use of the sampled site(s). Example: Vegetable farmlands, China"
+    },
+    "polymerTypes": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      },
+      "description": "All polymer types identified, with abbreviations as reported. Example: Polypropylene (PP); polyethylene (PE); polyester (PES)"
+    },
+    "identificationMethod": {
+      "type": "STRING",
+      "description": "Technique used to identify/confirm polymers. Example: µ-FT-IR; stereomicroscope + FTIR"
+    },
+    "digestionMethod": {
+      "type": "STRING",
+      "description": "Chemical digestion used to remove organic matter, or \"NA\". Example: 30% H2O2"
+    },
+    "densitySeparation": {
+      "type": "STRING",
+      "description": "Density separation solution and density, or \"NA\". Example: saturated NaCl (1.19 g/cm³)"
+    },
+    "measurements": {
+      "type": "ARRAY",
+      "description": "Return ONE object for EACH distinct soil/field type or sampling stratum the study reports a microplastic concentration for (e.g. shallow soil vs deep soil, or orchards vs paddy fields vs vegetable plots). If the study reports only one overall value, return a single object.",
+      "items": {
+        "type": "OBJECT",
+        "properties": {
+          "fieldType": {
+            "type": "STRING",
+            "description": "The soil layer, land use, or stratum this row describes. Example: Shallow soil; Deep soil; orchards; paddy fields"
+          },
+          "mean": {
+            "type": "STRING",
+            "description": "Mean abundance for this stratum, with ± SD if reported. \"NA\" if not given. Example: 78.00 ± 12.91"
+          },
+          "min": {
+            "type": "STRING",
+            "description": "Minimum abundance reported, or \"NA\"."
+          },
+          "max": {
+            "type": "STRING",
+            "description": "Maximum abundance reported, or \"NA\"."
+          },
+          "unit": {
+            "type": "STRING",
+            "description": "Unit of the abundance values. Example: items kg⁻¹"
+          }
+        },
+        "required": [
+          "fieldType",
+          "mean",
+          "min",
+          "max",
+          "unit"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "OBJECT",
+      "description": "For each key finding, the exact text snippet copied verbatim from the PDF that supports it. Used for verification.",
+      "properties": {
+        "reference": {
+          "type": "STRING"
+        },
+        "location": {
+          "type": "STRING"
+        },
+        "polymerTypes": {
+          "type": "STRING"
+        },
+        "identificationMethod": {
+          "type": "STRING"
+        },
+        "measurements": {
+          "type": "STRING"
+        }
+      }
+    }
+  },
+  "required": [
+    "reference",
+    "studyTitle",
+    "location",
+    "polymerTypes",
+    "identificationMethod",
+    "digestionMethod",
+    "densitySeparation",
+    "measurements"
+  ]
+}

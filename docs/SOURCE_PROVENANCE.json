@@ -1,0 +1,154 @@
+{
+  "source_archive": "pdf-analyzer_multibot.zip",
+  "archive_sha256": "d6e03261dc8cb04577b7d315a7df5f38bcc8283b153e53cc74abc1834e89fcb4",
+  "author_confirmed_publication_date": "2026-10-30",
+  "original_source_files": [
+    {
+      "path": "components/FullTextCard.tsx",
+      "sha256": "2ec01515fbaf96f43cda29a49faf258b2f2eae7ac6382f16fc0e804884787af9"
+    },
+    {
+      "path": "components/CitationCard.tsx",
+      "sha256": "6a1ed8ffd4298cef7bd3596eee2351cb4d409b313dff310604b9befb330e725a"
+    },
+    {
+      "path": "components/PdfViewer.tsx",
+      "sha256": "d375f420af22ce0e5eb31d29110725329662f058899ffaed1a8fe4215d972750"
+    },
+    {
+      "path": "components/EmptyState.tsx",
+      "sha256": "500cd8026ad4bb41752d8c0755c8ec63ffd65ccee7df36d56170840094a2fe66"
+    },
+    {
+      "path": "components/PdfCard.tsx",
+      "sha256": "699f7010da997c5ff6e092aeb7d2d7758f79297288487afb2fd5511de6939ed0"
+    },
+    {
+      "path": "providers/models.ts",
+      "sha256": "1efa1cc8e2ac9384f4f9b437dd48a6de1c6246791b6bd21af9119243523dae13"
+    },
+    {
+      "path": "providers/index.ts",
+      "sha256": "8af9ff41d4c91e7b4ae279a99bc2c1991fe09776e480cd23ceae86d720f849d7"
+    },
+    {
+      "path": "providers/openai.ts",
+      "sha256": "e82ec9620d30ed9c9f290a9d2d84da969712c03b590c5b6130eee6ba292b2b4d"
+    },
+    {
+      "path": "providers/gemini.ts",
+      "sha256": "02e4893b63cac9d304cf8d19a7e979dcdfef85128aa5d5ccc7096352d0919e73"
+    },
+    {
+      "path": "providers/util.ts",
+      "sha256": "ca8d59107d933bfa6dac8172d74d93bcbcef835dec936d1596f7bdbb2e1f6f83"
+    },
+    {
+      "path": "providers/anthropic.ts",
+      "sha256": "ec1b01aa53559075cc924ff8cab8d393e937c659f63b3f5d64ee60c94e63b9a8"
+    },
+    {
+      "path": "providers/types.ts",
+      "sha256": "fdadc89e98d944b08c7985f3be23ccfdef0468ea3cc0965b1e37f5d7a5b68034"
+    },
+    {
+      "path": "App.tsx",
+      "sha256": "8f342d2700242d7fb535913867b144d273673cfe1fd2d1734dcb7890123029f4"
+    },
+    {
+      "path": "index.css",
+      "sha256": "cdad0b3744d446739f81aba4678bd9f99a0cafddbaf05f2f58c9f683f87a59aa"
+    },
+    {
+      "path": "services/geminiService.ts",
+      "sha256": "049da93e7bf7b09dc5534e6b4cbbf275019ef99d140f0fb48fb6489702d6d7aa"
+    },
+    {
+      "path": ".env.local.example",
+      "sha256": "0012ba16d0bc835db88c21bb812cdaf52131c974f3c481a7a76f88eca4bc35d5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e9804ce9a6f120f5ee2e7533185d0ea8b3cfca198523c44c088374981c1eaf5"
+    },
+    {
+      "path": "templateTypes.ts",
+      "sha256": "284a0d29004884a3a6c5ece8ff44098f6d3175d2cec717d79b4b2bc0e59a7fcf"
+    },
+    {
+      "path": "index.html",
+      "sha256": "4812d758b10b3f71247fef3d1b8b87657a180292af251550dd033c7548acae0c"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "171b28c48f6d5411bb73f84d66ed68d3f984a12c9c96aaccaf11197a5a7ae19e"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+    },
+    {
+      "path": "templates/toxicity.ts",
+      "sha256": "78d8f4dca1cfa18d88df2aa0eb2d27a70dc2edbbe0209e5429edf97e1cf80ca2"
+    },
+    {
+      "path": "templates/index.ts",
+      "sha256": "c18ebedf431620193cac86cdc06895c23f9128224fe4933a12cd955fdf9b86cc"
+    },
+    {
+      "path": "templates/microplastic.ts",
+      "sha256": "b94b9138e516ee073389c85988bef233a2e7a4ddaf4e75c058b3af8f44ae710e"
+    },
+    {
+      "path": "templates/rat.ts",
+      "sha256": "4760c9ffe5d97a83eea278dec53596c1e036e1ef6af4e1e63183c27408472e1f"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "0687f6504dc2e4281fd7b170f954728e7cf93d634282a571ef1bc3fc7ea97b99"
+    },
+    {
+      "path": "package.json",
+      "sha256": "945414bc1e9e1507a31f32f902fec69f2dafcb69575a8a40a230594b72e7bbe8"
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "bd4046d3863f3908663376d57c28a22757d1e9a3e863541eafbf2ff76759a535"
+    },
+    {
+      "path": "lib/screeningRules.ts",
+      "sha256": "b185e873090031e62f2bcb1cfb20cbcad5eaa68e4ab9f947911a0b9d1e810f2e"
+    },
+    {
+      "path": "lib/buildFromTemplate.ts",
+      "sha256": "5089759e3d60411f52f85661ce838bb2bdcd8c02a272a5bbacaaaeb5ddb625a0"
+    },
+    {
+      "path": "lib/db.ts",
+      "sha256": "98463a9084e9b56e9abfb769d62422bd768457804a9301328f9bdfb8acb5900c"
+    },
+    {
+      "path": "lib/pdfMatch.ts",
+      "sha256": "7851c107803cf272b79ad25771cc30ea5ac9be72a7e6466998bf072ac95a41e1"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "8641deb29adfd1958488d1951f0d5ddf3013f498aa67ce0f621e347f0ef608d2"
+    },
+    {
+      "path": "index.tsx",
+      "sha256": "8f74aaeda6d1eda28649c96550938b6d4760c7b6c05490b166a0596776594b18"
+    },
+    {
+      "path": "types.ts",
+      "sha256": "95aa3ddf29bc9900394e97389cffc13ba1ae343529a54375f40bd5eaae8c58ed"
+    }
+  ],
+  "publication_changes_to_existing_files": [
+    "README.md",
+    ".gitignore",
+    "package.json",
+    "package-lock.json",
+    "vite.config.ts"
+  ]
+}
